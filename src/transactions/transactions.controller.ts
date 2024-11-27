@@ -1,7 +1,5 @@
 import { Controller, Get, Post } from '@nestjs/common';
 import { TransactionsService } from './transactions.service';
-import * as fs from 'fs';
-import * as path from 'path';
 
 @Controller('transactions')
 export class TransactionsController {
