@@ -6,6 +6,8 @@ import * as express from 'express';
 async function bootstrap() {
   const isServerless = process.env.VERCEL === 'true';
 
+  console.log('isServerless', isServerless);
+
   if (isServerless) {
     const server = express();
     const app = await NestFactory.create(AppModule, new ExpressAdapter(server));
